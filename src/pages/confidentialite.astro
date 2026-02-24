@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Politique de Confidentialité — TitanBTP';
+const description = 'Politique de confidentialité de TitanBTP. Comment nous collectons, utilisons et protégeons tes données personnelles.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="pt-28 pb-20 lg:pt-40 lg:pb-28">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-10">Politique de Confidentialité</h1>
+
+      <div class="prose prose-invert prose-sm max-w-none space-y-8">
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">1. Données collectées</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Dans le cadre de l'utilisation de TitanBTP, nous collectons les données suivantes :
+          </p>
+          <ul class="text-gray-400 space-y-1 list-disc list-inside mt-2">
+            <li>Données d'inscription : nom, prénom, email, mot de passe (chiffré)</li>
+            <li>Données d'entreprise : nom, SIRET, adresse, logo</li>
+            <li>Données métier : devis, factures, projets, clients, tarifs</li>
+            <li>Données techniques : adresse IP, navigateur, système d'exploitation</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">2. Finalité du traitement</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Les données sont collectées pour fournir et améliorer le service TitanBTP :
+            gestion de ton compte, génération de documents, estimation IA et communication
+            relative au service.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">3. Hébergement et sécurité</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Tes données sont hébergées sur des serveurs sécurisés en Europe.
+            Les connexions sont chiffrées via HTTPS/TLS. Les mots de passe sont
+            hachés et ne sont jamais stockés en clair.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">4. Partage des données</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Tes données ne sont jamais vendues ni partagées avec des tiers à des fins
+            commerciales. Elles peuvent être partagées avec nos sous-traitants techniques
+            (hébergement, envoi d'emails) dans le strict cadre du fonctionnement du service.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">5. Durée de conservation</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Tes données sont conservées pendant toute la durée de ton utilisation du service.
+            En cas de suppression de compte, tes données sont définitivement supprimées après
+            un délai de 30 jours.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">6. Tes droits</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Conformément au RGPD, tu disposes des droits suivants :
+          </p>
+          <ul class="text-gray-400 space-y-1 list-disc list-inside mt-2">
+            <li>Droit d'accès à tes données</li>
+            <li>Droit de rectification</li>
+            <li>Droit à l'effacement</li>
+            <li>Droit à la portabilité</li>
+            <li>Droit d'opposition au traitement</li>
+          </ul>
+          <p class="text-gray-400 leading-relaxed mt-2">
+            Pour exercer ces droits, contacte-nous à
+            <a href="mailto:contact@titanbtp.com" class="text-primary-light hover:underline">contact@titanbtp.com</a>.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">7. Cookies</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Le site vitrine titanbtp.com n'utilise pas de cookies de suivi publicitaire.
+            Des cookies techniques strictement nécessaires au fonctionnement de l'application
+            peuvent être utilisés sur app.titanbtp.com.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">8. Contact</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Pour toute question concernant cette politique de confidentialité, contacte-nous à
+            <a href="mailto:contact@titanbtp.com" class="text-primary-light hover:underline">contact@titanbtp.com</a>.
+          </p>
+        </div>
+
+        <p class="text-gray-500 text-sm italic">Dernière mise à jour : février 2026</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

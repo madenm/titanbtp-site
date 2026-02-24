@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProblemSolution from '../components/ProblemSolution.astro';
+import FeatureCards from '../components/FeatureCards.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Pricing from '../components/Pricing.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const title = 'TitanBTP — Gestion de chantiers, devis et factures pour artisans BTP';
+const description = 'L\'outil tout-en-un pour les artisans du BTP : devis, factures, planning, CRM et estimation IA. Gratuit, sans carte bancaire. Inscris-toi en 2 minutes.';
+
+const softwareSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'TitanBTP',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'EUR',
+  },
+  description: 'Logiciel de gestion tout-en-un pour artisans et entreprises du BTP : devis, factures, planning, CRM et estimation par IA.',
+  url: 'https://titanbtp.com',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    ratingCount: '24',
+  },
+});
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'C\'est vraiment gratuit ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Oui, le plan Gratuit est gratuit pour toujours. Pas de période d\'essai, pas de carte bancaire demandée.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Est-ce que mes données sont sécurisées ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Tes données sont hébergées sur des serveurs sécurisés en Europe. Les connexions sont chiffrées (HTTPS/TLS).' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Ça marche sur téléphone ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Oui, TitanBTP est une application web responsive qui fonctionne sur téléphone, tablette et ordinateur.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Comment fonctionne l\'estimation par IA ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Tu prends une photo du chantier et réponds à quelques questions. L\'IA fournit une estimation détaillée : coût, matériaux, durée et marge.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Mes devis et factures sont-ils conformes ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Oui, les documents respectent les obligations légales françaises : mentions obligatoires, numérotation automatique, TVA paramétrable.' },
+    },
+  ],
+});
+
+---
+
+<BaseLayout title={title} description={description} schema={softwareSchema}>
+  <Hero />
+  <ProblemSolution />
+  <FeatureCards />
+  <HowItWorks />
+  <Testimonials />
+  <Pricing />
+  <FAQ />
+  <CTA />
+  <script type="application/ld+json" set:html={faqSchema} />
+</BaseLayout>

@@ -1,0 +1,101 @@
+<section class="relative pt-28 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+  <!-- Background gradient -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/20 rounded-full blur-[128px]"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary-dark/10 rounded-full blur-[96px]"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-4xl mx-auto">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-8">
+        <span class="w-2 h-2 rounded-full bg-cta animate-pulse"></span>
+        <span class="text-sm font-medium text-primary-light">Gratuit &bull; Aucune carte bancaire &bull; Prêt en 2 minutes</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+        Gère tes chantiers, devis et factures
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-light to-primary">
+          en un seul endroit
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        L'outil tout-en-un des artisans du BTP. Crée tes devis en 5 minutes,
+        suis tes paiements et estime tes chantiers grâce à l'IA.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="https://app.titanbtp.com/auth"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-dark text-gray-900 font-semibold rounded-xl px-8 py-3.5 text-base transition-all hover:shadow-lg hover:shadow-cta/25"
+        >
+          Essayer gratuitement
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+        </a>
+        <a
+          href="#fonctionnalites"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/15 text-white font-medium rounded-xl px-8 py-3.5 text-base hover:bg-white/5 transition-colors"
+        >
+          Voir les fonctionnalités
+        </a>
+      </div>
+
+      <!-- Dashboard mockup -->
+      <div class="mt-16 relative">
+        <div class="bg-surface-light/60 border border-white/10 rounded-2xl p-2 backdrop-blur-sm shadow-2xl shadow-primary/5">
+          <div class="bg-surface rounded-xl overflow-hidden">
+            <!-- Simulated dashboard -->
+            <div class="p-4 sm:p-6">
+              <!-- Top bar -->
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                  </div>
+                  <span class="text-sm font-semibold text-white">Tableau de bord</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs text-gray-500">Aujourd'hui</span>
+                  <div class="w-7 h-7 rounded-full bg-primary/20"></div>
+                </div>
+              </div>
+
+              <!-- KPI row -->
+              <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+                <div class="bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4">
+                  <p class="text-xs text-gray-500 mb-1">Chantiers actifs</p>
+                  <p class="text-xl sm:text-2xl font-bold text-white">12</p>
+                </div>
+                <div class="bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4">
+                  <p class="text-xs text-gray-500 mb-1">Devis en attente</p>
+                  <p class="text-xl sm:text-2xl font-bold text-accent">8</p>
+                </div>
+                <div class="bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4">
+                  <p class="text-xs text-gray-500 mb-1">Factures impayées</p>
+                  <p class="text-xl sm:text-2xl font-bold text-red-400">3</p>
+                </div>
+                <div class="bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4">
+                  <p class="text-xs text-gray-500 mb-1">CA ce mois</p>
+                  <p class="text-xl sm:text-2xl font-bold text-cta">24 850 €</p>
+                </div>
+              </div>
+
+              <!-- Chart placeholder -->
+              <div class="bg-surface-light/30 border border-white/5 rounded-xl p-4 h-32 sm:h-48 flex items-end justify-between gap-1 sm:gap-2">
+                {[40, 65, 45, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((h) => (
+                  <div class="flex-1 rounded-t-md bg-gradient-to-t from-primary/40 to-primary/80" style={`height: ${h}%`}></div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Glow effect behind the mockup -->
+        <div class="absolute -inset-4 -z-10 bg-gradient-to-b from-primary/10 to-transparent rounded-3xl blur-2xl"></div>
+      </div>
+    </div>
+  </div>
+</section>
