@@ -1,9 +1,9 @@
 ---
 const year = new Date().getFullYear();
 const productLinks = [
-  { href: '/fonctionnalites', label: 'Fonctionnalités' },
-  { href: '/#tarifs', label: 'Tarifs' },
-  { href: '/contact', label: 'Contact' },
+  { href: '#fonctionnalites', label: 'Fonctionnalités' },
+  { href: '#tarifs', label: 'Tarifs' },
+  { href: 'https://calendly.com/your-calendly-link', target: '_blank', label: 'Planifier une démo' },
 ];
 const legalLinks = [
   { href: '/mentions-legales', label: 'Mentions légales' },
@@ -45,6 +45,8 @@ const legalLinks = [
               <li>
                 <a
                   href={link.href}
+                  target={link.target}
+                  rel={link.target ? 'noopener noreferrer' : undefined}
                   class="text-sm text-gray-400 hover:text-primary-light transition-colors"
                 >
                   {link.label}

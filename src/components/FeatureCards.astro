@@ -48,37 +48,55 @@ const features = [
 <section id="fonctionnalites" class="py-20 lg:py-28 bg-surface-light/30">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <span class="text-sm font-semibold text-primary-light uppercase tracking-wider">Fonctionnalités</span>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">
-        Tout ce dont tu as besoin, <span class="text-primary-light">rien de superflu</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">
+        Tout ce qu'il te faut <span class="text-primary-light">pour gérer ton activité</span>
       </h2>
-      <p class="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
-        Un outil pensé par et pour les artisans. Chaque fonctionnalité te fait gagner du temps au quotidien.
-      </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {
-        features.map((feat) => (
-          <div class={`group bg-surface-light/50 border border-white/5 rounded-2xl p-6 hover:bg-surface-light/70 transition-all duration-300 ${feat.border}`}>
-            <div class={`w-14 h-14 rounded-xl bg-gradient-to-br ${feat.color} flex items-center justify-center text-white mb-5`}>
-              <Fragment set:html={feat.icon} />
-            </div>
-            <h3 class="text-lg font-semibold text-white mb-2">{feat.title}</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">{feat.description}</p>
-          </div>
-        ))
-      }
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-6">Chantiers & devis</h3>
+        <ul class="space-y-4 text-gray-300">
+          <li class="flex gap-3">
+            <span class="text-primary-light mt-1 font-bold">•</span>
+            <span>Estimation IA : photo → coût, matériaux, durée</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary-light mt-1 font-bold">•</span>
+            <span>Devis pro en 5 minutes avec pré-remplissage</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary-light mt-1 font-bold">•</span>
+            <span>Catalogue Artiprix intégré</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary-light mt-1 font-bold">•</span>
+            <span>Convertir dévis → facture en 1 clic</span>
+          </li>
+        </ul>
+      </div>
 
-    <div class="text-center mt-12">
-      <a
-        href="/fonctionnalites"
-        class="inline-flex items-center gap-2 text-primary-light hover:text-white font-medium transition-colors"
-      >
-        Découvrir toutes les fonctionnalités
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-      </a>
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-6">Gestion & équipe</h3>
+        <ul class="space-y-4 text-gray-300">
+          <li class="flex gap-3">
+            <span class="text-primary-light mt-1 font-bold">•</span>
+            <span>Planning visuel : semaine, mois, liste</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary-light mt-1 font-bold">•</span>
+            <span>CRM intégré pour suivre tes prospects</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary-light mt-1 font-bold">•</span>
+            <span>Suivi paiements et rappels auto</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary-light mt-1 font-bold">•</span>
+            <span>Invite ton équipe avec permissions</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
