@@ -1,8 +1,9 @@
 ---
 const currentPath = Astro.url.pathname;
 const links = [
-  { href: '#fonctionnalites', label: 'Fonctionnalités' },
-  { href: '#tarifs', label: 'Tarifs' },
+  { href: '/fonctionnalites', label: 'Fonctionnalités' },
+  { href: '/#tarifs', label: 'Tarifs' },
+  { href: '/contact', label: 'Contact' },
 ];
 ---
 
@@ -44,12 +45,16 @@ const links = [
       <!-- Desktop CTA -->
       <div class="hidden md:flex items-center gap-3">
         <a
-          href="https://calendly.com/your-calendly-link"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/contact"
+          class="text-sm font-medium text-gray-300 border border-gray-600 rounded-lg px-4 py-2 hover:border-primary-light hover:text-white transition-colors"
+        >
+          Nous contacter
+        </a>
+        <a
+          href="/contact"
           class="text-sm font-semibold bg-cta hover:bg-cta-dark text-gray-900 rounded-lg px-4 py-2 transition-colors"
         >
-          Planifier une démo
+          Demander une démo
         </a>
       </div>
 
@@ -85,12 +90,16 @@ const links = [
       }
       <div class="flex flex-col gap-2 pt-3 border-t border-white/10">
         <a
-          href="https://calendly.com/your-calendly-link"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/contact"
+          class="text-center text-sm font-medium text-gray-300 border border-gray-600 rounded-lg px-4 py-2.5 hover:border-primary-light hover:text-white transition-colors"
+        >
+          Nous contacter
+        </a>
+        <a
+          href="/contact"
           class="text-center text-sm font-semibold bg-cta hover:bg-cta-dark text-gray-900 rounded-lg px-4 py-2.5 transition-colors"
         >
-          Planifier une démo
+          Demander une démo
         </a>
       </div>
     </div>
