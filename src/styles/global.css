@@ -11,6 +11,7 @@
   --color-surface-light: #1a1a2e;
   --color-surface-lighter: #252540;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', var(--font-sans);
 }
 
 @layer base {
@@ -23,5 +24,46 @@
     color: #e2e8f0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.12), transparent),
+      linear-gradient(to bottom, transparent 0%, var(--color-surface) 20%);
+    background-attachment: fixed;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Animation au scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation mockup Hero au chargement */
+.hero-mockup {
+  opacity: 0;
+  transform: translateY(32px) scale(0.98);
+  animation: heroMockupIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+}
+@keyframes heroMockupIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
