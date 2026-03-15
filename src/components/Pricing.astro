@@ -1,99 +1,141 @@
 <section id="tarifs" class="py-20 lg:py-28">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
+    <div class="text-center mb-10">
       <span class="text-sm font-semibold text-primary-light uppercase tracking-wider">Tarifs</span>
       <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">
-        Commence <span class="text-cta">gratuitement</span>, évolue quand tu veux
+        Offres <span class="text-cta">Early Bird</span> — prix limités dans le temps
       </h2>
       <p class="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
-        Pas de piège, pas de carte bancaire. Tu utilises TitanBTP gratuitement aussi longtemps que tu veux.
+        Abonnements annuels. Prix affichés en €/mois pour la lisibilité, facturés en une fois à l'année.
       </p>
     </div>
 
+    <!-- Bandeau Early Bird -->
+    <div class="max-w-4xl mx-auto mb-10">
+      <div class="bg-gradient-to-r from-cta/20 to-primary/20 border-2 border-cta/40 rounded-2xl px-6 py-4 text-center">
+        <p class="text-lg sm:text-xl font-bold text-white">
+          Offre Early Bird — Prix limité
+        </p>
+        <p class="mt-1 text-sm text-gray-300">
+          Réservez votre tarif avant la fin de l'offre
+        </p>
+      </div>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-      <!-- Plan Gratuit -->
+      <!-- Solo — Early Bird -->
       <div class="relative bg-surface-light/50 border-2 border-primary/40 rounded-2xl p-8">
-        <div class="absolute -top-3 left-6">
-          <span class="bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-            Populaire
+        <div class="absolute -top-3 right-6">
+          <span class="bg-cta text-gray-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+            Early Bird -50%
           </span>
         </div>
         <div class="mb-6">
-          <h3 class="text-2xl font-bold text-white">Gratuit</h3>
-          <div class="mt-4 flex items-baseline gap-1">
-            <span class="text-5xl font-extrabold text-white">0 €</span>
-            <span class="text-gray-400">/mois</span>
+          <h3 class="text-2xl font-bold text-white">Solo — Early Bird</h3>
+          <div class="mt-4 flex flex-wrap items-baseline gap-2">
+            <span class="text-xl text-gray-500 line-through">99 €/mois</span>
+            <span class="text-gray-500 text-sm">(1188 €/an)</span>
           </div>
-          <p class="mt-2 text-sm text-gray-400">Pour toujours. Aucune limite de temps.</p>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-4xl sm:text-5xl font-extrabold text-white">49 €</span>
+            <span class="text-xl font-bold text-white">/mois</span>
+          </div>
+          <p class="mt-1 text-sm text-gray-400">soit 588 € facturé annuellement</p>
+          <p class="mt-3 text-sm text-primary-light font-medium">Prix garanti à vie pour les premiers inscrits</p>
         </div>
 
-        <ul class="space-y-3 mb-8">
-          {
-            [
-              'Devis & factures illimités',
-              'Estimation IA (5 / mois)',
-              'Planning vue liste & mois',
-              'Gestion de projets',
-              'CRM Pipeline',
-              '1 utilisateur',
-              'Catalogue de tarifs',
-              'Support par email',
-            ].map((feat) => (
-              <li class="flex items-start gap-3 text-sm text-gray-300">
-                <svg class="w-5 h-5 text-cta shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                {feat}
-              </li>
-            ))
-          }
+        <ul class="space-y-3 mb-8 text-sm text-gray-300">
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> 5 chantiers actifs max</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> 15 devis/mois</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> Factures illimitées</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> Planning, Clients / Contacts</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> PDF + Envoi email, Signature électronique</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> CRM Pipeline</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> IA : 5 utilisations/jour</li>
+          <li class="flex items-center gap-3"><span class="text-gray-500">✗</span> Gestion d'équipe</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> Support standard</li>
         </ul>
 
         <a
-          href="/contact"
+          href="https://calendly.com/mustafamaden1706/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           class="block w-full text-center bg-cta hover:bg-cta-dark text-gray-900 font-semibold rounded-xl px-6 py-3.5 transition-all hover:shadow-lg hover:shadow-cta/25"
         >
-          Nous contacter
+          Réserver l'offre Solo
         </a>
       </div>
 
-      <!-- Plan Pro -->
-      <div class="bg-surface-light/30 border border-white/10 rounded-2xl p-8 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+      <!-- Pro — Early Bird -->
+      <div class="relative bg-surface-light/50 border-2 border-cta/50 rounded-2xl p-8">
+        <div class="absolute -top-3 right-6">
+          <span class="bg-cta text-gray-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+            Early Bird -25%
+          </span>
+        </div>
         <div class="mb-6">
-          <h3 class="text-2xl font-bold text-white">Pro</h3>
-          <div class="mt-4 flex items-baseline gap-1">
-            <span class="text-4xl font-extrabold text-gray-400">Bientôt</span>
+          <h3 class="text-2xl font-bold text-white">Pro — Early Bird</h3>
+          <div class="mt-4 flex flex-wrap items-baseline gap-2">
+            <span class="text-xl text-gray-500 line-through">199 €/mois</span>
+            <span class="text-gray-500 text-sm">(2388 €/an)</span>
           </div>
-          <p class="mt-2 text-sm text-gray-500">Prix et détails annoncés prochainement.</p>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-4xl sm:text-5xl font-extrabold text-white">149 €</span>
+            <span class="text-xl font-bold text-white">/mois</span>
+          </div>
+          <p class="mt-1 text-sm text-gray-400">soit 1788 € facturé annuellement</p>
+          <p class="mt-3 text-sm text-primary-light font-medium">Prix garanti à vie pour les premiers inscrits</p>
         </div>
 
-        <ul class="space-y-3 mb-8">
-          {
-            [
-              'Tout le plan Gratuit, plus :',
-              'Équipe illimitée',
-              'Estimation IA illimitée',
-              'Planning vue semaine',
-              'Gestion multi-entreprise',
-              'Catalogue Artiprix intégré',
-              'Support prioritaire',
-              'API & intégrations',
-            ].map((feat, i) => (
-              <li class:list={['flex items-start gap-3 text-sm', i === 0 ? 'text-primary-light font-medium' : 'text-gray-500']}>
-                {i > 0 && (
-                  <svg class="w-5 h-5 text-gray-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                )}
-                {feat}
-              </li>
-            ))
-          }
+        <ul class="space-y-3 mb-8 text-sm text-gray-300">
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> Chantiers illimités</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> Devis illimités</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> Factures illimitées</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> Planning, Clients / Contacts</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> PDF + Envoi email, Signature électronique</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> CRM Pipeline</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> IA illimitée</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> Gestion d'équipe</li>
+          <li class="flex items-center gap-3"><span class="text-cta">✓</span> Support prioritaire</li>
         </ul>
 
-        <button
-          disabled
-          class="block w-full text-center bg-white/5 text-gray-500 font-semibold rounded-xl px-6 py-3.5 cursor-not-allowed border border-white/10"
+        <a
+          href="https://calendly.com/mustafamaden1706/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full text-center bg-cta hover:bg-cta-dark text-gray-900 font-semibold rounded-xl px-6 py-3.5 transition-all hover:shadow-lg hover:shadow-cta/25"
         >
-          Bientôt disponible
-        </button>
+          Réserver l'offre Pro
+        </a>
+      </div>
+    </div>
+
+    <!-- Tableau comparatif -->
+    <div class="mt-20 max-w-4xl mx-auto">
+      <h3 class="text-xl font-bold text-white text-center mb-6">Comparatif des fonctionnalités</h3>
+      <div class="overflow-x-auto rounded-2xl border border-white/10 bg-surface-light/30">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="px-4 py-4 font-semibold text-white">Fonctionnalité</th>
+              <th class="px-4 py-4 font-semibold text-white text-center">Solo</th>
+              <th class="px-4 py-4 font-semibold text-white text-center">Pro</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-300">
+            <tr class="border-b border-white/5"><td class="px-4 py-3">Chantiers actifs</td><td class="px-4 py-3 text-center">5 max</td><td class="px-4 py-3 text-center">Illimités</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">Devis / mois</td><td class="px-4 py-3 text-center">15</td><td class="px-4 py-3 text-center">Illimités</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">Factures</td><td class="px-4 py-3 text-center">Illimitées</td><td class="px-4 py-3 text-center">Illimitées</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">Planning</td><td class="px-4 py-3 text-center">✓</td><td class="px-4 py-3 text-center">✓</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">Clients / Contacts</td><td class="px-4 py-3 text-center">✓</td><td class="px-4 py-3 text-center">✓</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">PDF + Envoi email</td><td class="px-4 py-3 text-center">✓</td><td class="px-4 py-3 text-center">✓</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">Signature électronique</td><td class="px-4 py-3 text-center">✓</td><td class="px-4 py-3 text-center">✓</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">CRM Pipeline</td><td class="px-4 py-3 text-center">✓</td><td class="px-4 py-3 text-center">✓</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">IA</td><td class="px-4 py-3 text-center">5 utilisations/jour</td><td class="px-4 py-3 text-center">Illimitée</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">Gestion d'équipe</td><td class="px-4 py-3 text-center">✗</td><td class="px-4 py-3 text-center">✓</td></tr>
+            <tr class="border-b border-white/5"><td class="px-4 py-3">Support</td><td class="px-4 py-3 text-center">Standard</td><td class="px-4 py-3 text-center">Prioritaire</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
