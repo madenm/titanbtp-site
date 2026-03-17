@@ -55,15 +55,46 @@
   transform: translateY(0);
 }
 
-/* Animation mockup Hero au chargement */
+/* Cadre "faux ordinateur" : animation d'entrée au chargement */
 .hero-mockup {
   opacity: 0;
   transform: translateY(32px) scale(0.98);
-  animation: heroMockupIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+  animation: heroMockupIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
 }
 @keyframes heroMockupIn {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+/* Contenu (chiffres + graphique) : animé au scroll uniquement */
+
+/* Chiffres KPI Hero : cascade déclenchée au scroll */
+.hero-kpi-item {
+  opacity: 0;
+  transform: translateY(12px) scale(0.96);
+}
+.hero-dashboard-inview .hero-kpi-item {
+  animation: heroKpiIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes heroKpiIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Barres du graphique Hero : montée déclenchée au scroll */
+.hero-chart-bar {
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+.hero-dashboard-inview .hero-chart-bar {
+  animation: heroBarGrow 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes heroBarGrow {
+  to {
+    transform: scaleY(1);
   }
 }

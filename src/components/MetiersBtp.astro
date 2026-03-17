@@ -1,0 +1,50 @@
+---
+const metiers = [
+  'Plombier',
+  'Électricien',
+  'Maçon',
+  'Peintre',
+  'Couvreur',
+  'Carreleur',
+  'Menuisier',
+  'Chauffagiste',
+  'Terrassier',
+  'Pisciniste',
+  'Jardinier',
+  'Entrepreneur général',
+];
+---
+
+<section class="animate-on-scroll py-20 lg:py-28 bg-surface-light/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="text-sm font-semibold text-primary-light uppercase tracking-wider">Pour tous les artisans</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">
+        Adapté à tous les métiers du BTP
+      </h2>
+      <p class="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
+        Que vous soyez plombier, maçon, électricien ou couvreur, TitanBTP s'adapte à votre activité.
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+      {
+        metiers.map((m) => (
+          <span
+            class="px-4 py-2.5 rounded-xl bg-surface-light/50 border border-white/10 text-gray-300 text-sm font-medium hover:border-primary/30 hover:text-white transition-colors"
+          >
+            {m}
+          </span>
+        ))
+      }
+    </div>
+    <div class="text-center mt-10">
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 text-primary-light hover:text-white font-semibold transition-colors"
+      >
+        Découvrir TitanBTP
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+      </a>
+    </div>
+  </div>
+</section>

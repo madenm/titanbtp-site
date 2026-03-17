@@ -4,14 +4,15 @@ import Hero from '../components/Hero.astro';
 import Stats from '../components/Stats.astro';
 import ProblemSolution from '../components/ProblemSolution.astro';
 import FeatureCards from '../components/FeatureCards.astro';
+import MetiersBtp from '../components/MetiersBtp.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Pricing from '../components/Pricing.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
 
-const title = 'TitanBTP — Gestion de chantiers, devis et factures pour artisans BTP';
-const description = 'L\'outil tout-en-un pour les artisans du BTP : devis, factures, planning, CRM et estimation IA. Gratuit, sans carte bancaire. Inscrivez-vous en 2 minutes.';
+const title = 'TitanBTP — Gestion chantiers, devis et factures pour artisans BTP';
+const description = 'Outil tout-en-un pour artisans et entreprises BTP : devis, factures, planning, CRM, signature électronique et estimation IA. Démo sans engagement. Offres Early Bird Solo et Pro.';
 
 const softwareSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -19,18 +20,9 @@ const softwareSchema = JSON.stringify({
   name: 'TitanBTP',
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'EUR',
-  },
-  description: 'Logiciel de gestion tout-en-un pour artisans et entreprises du BTP : devis, factures, planning, CRM et estimation par IA.',
+  description: 'Logiciel de gestion tout-en-un pour artisans et entreprises du BTP : devis, factures, planning, CRM, signature électronique et estimation par IA. Démo sans engagement.',
   url: 'https://titanbtp.com',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '24',
-  },
+  offers: { '@type': 'AggregateOffer', priceCurrency: 'EUR', lowPrice: '49', highPrice: '149', offerCount: '2' },
 });
 
 const faqSchema = JSON.stringify({
@@ -39,8 +31,8 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'C\'est vraiment gratuit ?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Oui, le plan Gratuit est gratuit pour toujours. Pas de période d\'essai, pas de carte bancaire demandée.' },
+      name: 'Comment accéder à TitanBTP ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Demandez une démo sans engagement. Les offres Early Bird Solo et Pro sont en cours. Après la démo, vous recevez vos accès pour gérer chantiers, devis, factures, planning et CRM.' },
     },
     {
       '@type': 'Question',
@@ -72,6 +64,7 @@ const faqSchema = JSON.stringify({
   <Stats />
   <ProblemSolution />
   <FeatureCards />
+  <MetiersBtp />
   <HowItWorks />
   <Testimonials />
   <Pricing />

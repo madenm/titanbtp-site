@@ -45,51 +45,79 @@
         </a>
       </div>
 
-      <!-- Dashboard mockup -->
-      <div class="mt-16 relative">
-        <div class="hero-mockup bg-surface-light/60 border border-white/10 rounded-2xl p-2 backdrop-blur-sm shadow-2xl shadow-primary/5">
-          <div class="bg-surface rounded-xl overflow-hidden">
-            <!-- Simulated dashboard -->
-            <div class="p-4 sm:p-6">
-              <!-- Top bar -->
-              <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                    <svg class="w-4 h-4 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+      <!-- Dashboard : cadre visible tout le temps, contenu animé au scroll -->
+      <div id="hero-dashboard-wrap" class="hero-dashboard-wrap mt-16 relative">
+        <p class="text-sm text-gray-500 mb-4">Vos chantiers, devis et CA en un coup d'œil</p>
+        <!-- Browser-style frame -->
+        <div class="hero-mockup rounded-xl overflow-hidden border border-white/10 bg-surface-light/80 shadow-2xl shadow-primary/5">
+          <!-- Title bar -->
+          <div class="flex items-center gap-2 px-4 py-2.5 bg-surface-light border-b border-white/5">
+            <div class="flex gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+            </div>
+            <span class="text-xs text-gray-500 ml-2 font-medium">TitanBTP — Vue d'ensemble</span>
+          </div>
+          <!-- App content -->
+          <div class="bg-surface-light/60 p-2 sm:p-3">
+            <div class="bg-surface rounded-xl overflow-hidden">
+              <div class="p-4 sm:p-6">
+                <!-- Top bar with greeting -->
+                <div class="flex items-center justify-between mb-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <svg class="w-4 h-4 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                    </div>
+                    <div>
+                      <span class="text-sm font-semibold text-white block">Vue d'ensemble</span>
+                      <span class="text-xs text-gray-500">Bonjour Jean-Pierre · SARL Dupont</span>
+                    </div>
                   </div>
-                  <span class="text-sm font-semibold text-white">Vue d'ensemble</span>
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs text-gray-500">Aujourd'hui</span>
+                    <div class="w-7 h-7 rounded-full bg-primary/20"></div>
+                  </div>
                 </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-xs text-gray-500">Aujourd'hui</span>
-                  <div class="w-7 h-7 rounded-full bg-primary/20"></div>
-                </div>
-              </div>
 
-              <!-- KPI row -->
-              <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-                <div class="bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4">
-                  <p class="text-xs text-gray-500 mb-1">Chantiers actifs</p>
-                  <p class="text-xl sm:text-2xl font-bold text-white">12</p>
+                <!-- KPI row -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+                  <div class="hero-kpi-item bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4" style="animation-delay: 0.05s">
+                    <p class="text-xs text-gray-500 mb-1">Chantiers actifs</p>
+                    <p class="text-xl sm:text-2xl font-bold text-white">12</p>
+                  </div>
+                  <div class="hero-kpi-item bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4" style="animation-delay: 0.15s">
+                    <p class="text-xs text-gray-500 mb-1">Devis en attente</p>
+                    <p class="text-xl sm:text-2xl font-bold text-accent">8</p>
+                  </div>
+                  <div class="hero-kpi-item bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4" style="animation-delay: 0.25s">
+                    <p class="text-xs text-gray-500 mb-1">Factures impayées</p>
+                    <p class="text-xl sm:text-2xl font-bold text-red-400">3</p>
+                  </div>
+                  <div class="hero-kpi-item bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4" style="animation-delay: 0.35s">
+                    <p class="text-xs text-gray-500 mb-1">CA ce mois</p>
+                    <p class="text-xl sm:text-2xl font-bold text-cta">24 850 €</p>
+                    <p class="text-xs text-cta/90 mt-0.5">+12 % vs mois dernier</p>
+                  </div>
                 </div>
-                <div class="bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4">
-                  <p class="text-xs text-gray-500 mb-1">Devis en attente</p>
-                  <p class="text-xl sm:text-2xl font-bold text-accent">8</p>
-                </div>
-                <div class="bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4">
-                  <p class="text-xs text-gray-500 mb-1">Factures impayées</p>
-                  <p class="text-xl sm:text-2xl font-bold text-red-400">3</p>
-                </div>
-                <div class="bg-surface-light/50 border border-white/5 rounded-xl p-3 sm:p-4">
-                  <p class="text-xs text-gray-500 mb-1">CA ce mois</p>
-                  <p class="text-xl sm:text-2xl font-bold text-cta">24 850 €</p>
-                </div>
-              </div>
 
-              <!-- Chart placeholder -->
-              <div class="bg-surface-light/30 border border-white/5 rounded-xl p-4 h-32 sm:h-48 flex items-end justify-between gap-1 sm:gap-2">
-                {[40, 65, 45, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((h) => (
-                  <div class="flex-1 rounded-t-md bg-gradient-to-t from-primary/40 to-primary/80" style={`height: ${h}%`}></div>
-                ))}
+                <!-- Chart with label -->
+                <p class="text-xs text-gray-500 mb-2">CA des 12 derniers jours</p>
+                <div class="bg-surface-light/30 border border-white/5 rounded-xl p-4 pt-3 h-36 sm:h-52">
+                  <div class="flex items-end justify-between gap-1 sm:gap-2 h-24 sm:h-36">
+                    {[40, 65, 45, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((h, i) => (
+                      <div
+                        class="hero-chart-bar flex-1 rounded-t-md bg-gradient-to-t from-primary/40 to-primary/80"
+                        style={`height: ${h}%; animation-delay: ${0.1 + i * 0.05}s`}
+                      ></div>
+                    ))}
+                  </div>
+                  <div class="flex justify-between mt-2 gap-1 text-[10px] sm:text-xs text-gray-500">
+                    <span>J1</span>
+                    <span>J6</span>
+                    <span>J12</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -97,6 +125,22 @@
         <!-- Glow effect behind the mockup -->
         <div class="absolute -inset-4 -z-10 bg-gradient-to-b from-primary/10 to-transparent rounded-3xl blur-2xl"></div>
       </div>
+
+      <script>
+        (function () {
+          const wrap = document.getElementById('hero-dashboard-wrap');
+          if (!wrap) return;
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) wrap.classList.add('hero-dashboard-inview');
+              });
+            },
+            { threshold: 0.6, rootMargin: '0px 0px -10% 0px' }
+          );
+          observer.observe(wrap);
+        })();
+      </script>
     </div>
   </div>
 </section>
