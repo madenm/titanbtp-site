@@ -31,6 +31,7 @@ const links = [
           links.map((link) => (
             <a
               href={link.href}
+              data-ga-event={link.href === '/#tarifs' ? 'view_pricing' : undefined}
               class:list={[
                 'text-sm font-medium transition-colors hover:text-primary-light',
                 currentPath === link.href ? 'text-primary-light' : 'text-gray-300',
@@ -46,12 +47,14 @@ const links = [
       <div class="hidden md:flex items-center gap-3">
         <a
           href="/contact"
+          data-ga-event="cta_click"
           class="text-sm font-medium text-gray-300 border border-gray-600 rounded-lg px-4 py-2 hover:border-primary-light hover:text-white transition-colors"
         >
           Nous contacter
         </a>
         <a
           href="/contact"
+          data-ga-event="book_demo"
           class="text-sm font-semibold bg-cta hover:bg-cta-dark text-gray-900 rounded-lg px-4 py-2 transition-colors"
         >
           Demander une démo
@@ -82,6 +85,7 @@ const links = [
         links.map((link) => (
           <a
             href={link.href}
+            data-ga-event={link.href === '/#tarifs' ? 'view_pricing' : undefined}
             class="text-base font-medium text-gray-300 hover:text-white py-2"
           >
             {link.label}
@@ -91,12 +95,14 @@ const links = [
       <div class="flex flex-col gap-2 pt-3 border-t border-white/10">
         <a
           href="/contact"
+          data-ga-event="cta_click"
           class="text-center text-sm font-medium text-gray-300 border border-gray-600 rounded-lg px-4 py-2.5 hover:border-primary-light hover:text-white transition-colors"
         >
           Nous contacter
         </a>
         <a
           href="/contact"
+          data-ga-event="book_demo"
           class="text-center text-sm font-semibold bg-cta hover:bg-cta-dark text-gray-900 rounded-lg px-4 py-2.5 transition-colors"
         >
           Demander une démo

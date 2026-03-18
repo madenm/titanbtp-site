@@ -46,6 +46,7 @@ const legalLinks = [
               <li>
                 <a
                   href={link.href}
+                  data-ga-event={link.href === '/#tarifs' ? 'view_pricing' : undefined}
                   class="text-sm text-gray-400 hover:text-primary-light transition-colors"
                 >
                   {link.label}
