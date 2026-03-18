@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -60,13 +61,24 @@ const siteName = 'TitanBTP';
     <!-- Schema.org -->
     {schema && <script type="application/ld+json" set:html={schema} />}
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC773FJK08"></script>
+    <!-- Google tag (gtag.js) — chargé uniquement si consentement cookies -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EC773FJK08');
+      window.gtag = gtag;
+      (function() {
+        var c = localStorage.getItem('titanbtp_cookie_consent');
+        if (c === 'accepted') {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EC773FJK08';
+          s.onload = function() {
+            gtag('js', new Date());
+            gtag('config', 'G-EC773FJK08');
+          };
+          document.head.appendChild(s);
+        }
+      })();
     </script>
   </head>
   <body class="min-h-screen flex flex-col">
@@ -75,6 +87,7 @@ const siteName = 'TitanBTP';
       <slot />
     </main>
     <Footer />
+    <CookieBanner />
     <script is:inline>
       document.body.addEventListener('click', function (e) {
         var el = e.target.closest('[data-ga-event]');
